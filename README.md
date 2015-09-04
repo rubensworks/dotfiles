@@ -8,7 +8,7 @@ Add the following line to your ~/.bash_profile:
 
 ### List of scripts:
 
-* git-init: Initalizes a new git repo with an empty repo file and an initial commit, also sets my UGent username and email.
+* git-init: Initalizes a new git repo with an empty repo file and an initial commit.
 
 ### List of aliases:
 
