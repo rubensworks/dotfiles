@@ -15,3 +15,5 @@ Add the following line to your ~/.bash_profile:
 * ll = ls -l
 * g = git status
 * cdl = cd;ls
+* gcm = git commit -m "$@"
+* gau = git add -u
