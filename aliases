@@ -1,0 +1,5 @@
+alias ll="ls -l"
+alias g="git status"
+
+cdl() { cd "$@" && ls; }
+
