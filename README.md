@@ -6,6 +6,10 @@ Add the following line to your ~/.bash_profile:
 
     source [path_to_this_repo]/load
 
+Add the following line to your ~/.vimrc:
+
+    source [path_to_this_repo]/vimrc
+
 ### List of scripts:
 
 * git-init: Initalizes a new git repo with an empty repo file and an initial commit.
