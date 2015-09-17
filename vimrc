@@ -18,7 +18,10 @@ Plugin 'tpope/vim-markdown'
 Plugin 'altercation/vim-colors-solarized'
 "Plugin 'Valloric/YouCompleteMe'
 Plugin 'junegunn/vim-easy-align'
+Plugin 'Raimondi/delimitMate'
+
 Plugin 'LaTeX-Box-Team/LaTeX-Box'
+Plugin 'elzr/vim-json'
 Plugin 'niklasl/vim-rdf'
 
 " All of your Plugins must be added before the following line
@@ -49,9 +52,9 @@ set encoding=utf-8  " set default encoding
 set laststatus=2    " always show the status line
 
 " wrap lines at 70 characters
-set formatprg=par\ -w70
-set formatoptions=t
-set textwidth=70
+"set formatprg=par\ -w70
+"set formatoptions=t
+"set textwidth=70
 
 " indentation
 set tabstop=4       " tab is 4 width
@@ -90,6 +93,12 @@ cmap w!! w !sudo tee % >/dev/null
 " paste the clipboard
 noremap <C-b> :r!xclip -sel c -o<CR><CR>
 noremap <C-m> :w !xclip -sel c<CR><CR>
+
+" Copy/paste to/from system clipboard
+nmap <C-c> :.w !pbcopy<CR><CR>
+vmap <C-c> :w !pbcopy<CR><CR>
+nmap <C-v> :set paste<CR>:r !pbpaste<CR>:set nopaste<CR>
+imap <C-v> <Esc>:set paste<CR>:r !pbpaste<CR>:set nopaste<CR>
 
 " Unfold everything upon opening a new file
 "autocmd BufRead * normal zR
