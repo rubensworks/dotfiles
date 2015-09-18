@@ -95,10 +95,11 @@ noremap <C-b> :r!xclip -sel c -o<CR><CR>
 noremap <C-m> :w !xclip -sel c<CR><CR>
 
 " Copy/paste to/from system clipboard
+" CTRL+c to copy, CTRL+b to paste
 nmap <C-c> :.w !pbcopy<CR><CR>
 vmap <C-c> :w !pbcopy<CR><CR>
-nmap <C-v> :set paste<CR>:r !pbpaste<CR>:set nopaste<CR>
-imap <C-v> <Esc>:set paste<CR>:r !pbpaste<CR>:set nopaste<CR>
+nmap <C-b> :set paste<CR>:r !pbpaste<CR>:set nopaste<CR>
+imap <C-b> <Esc>:set paste<CR>:r !pbpaste<CR>:set nopaste<CR>
 
 " Unfold everything upon opening a new file
 "autocmd BufRead * normal zR
