@@ -1,9 +1,0 @@
-#!/bin/bash
-# Loads the dotfiles in this collection
-
-DIR=$(dirname "${BASH_SOURCE[0]}" )
-
-source $DIR/aliases
-
-PATH="$PATH:$DIR/bin/"
-export PATH=$PATH

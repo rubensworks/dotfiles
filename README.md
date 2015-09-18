@@ -4,7 +4,7 @@
     
 Add the following line to your ~/.bash_profile:
 
-    source [path_to_this_repo]/load
+    source [path_to_this_repo]/bashrc
 
 Add the following line to your ~/.vimrc:
 
