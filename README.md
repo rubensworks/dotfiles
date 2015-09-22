@@ -13,6 +13,8 @@ Add the following line to your ~/.vimrc:
 ### List of scripts:
 
 * git-init: Initalizes a new git repo with an empty repo file and an initial commit.
+* sdir: Save the current working directory, so it can be loaded with the alias `ldir`.
+* ldir: Load the saved working directory and set it as current directory.
 
 ### List of aliases:
 
