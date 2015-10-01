@@ -1,8 +1,8 @@
 alias ll="ls -l"
 alias g="git status"
 alias gau="git add -u"
-alias ldir="if [ -f ~/.saved_dir ]; then cd `cat ~/.saved_dir`; fi"
 
 cdl() { cd "$@" && ls; }
 gcm() { git commit -m "$@"; }
+ldir() { if [ -f ~/.saved_dir ]; then dir=$(cat ~/.saved_dir) && cd $dir; fi; }
 

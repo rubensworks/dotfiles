@@ -23,6 +23,7 @@ Plugin 'Raimondi/delimitMate'
 Plugin 'LaTeX-Box-Team/LaTeX-Box'
 Plugin 'elzr/vim-json'
 Plugin 'niklasl/vim-rdf'
+Plugin 'moll/vim-node'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
