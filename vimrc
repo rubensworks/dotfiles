@@ -19,6 +19,7 @@ Plugin 'altercation/vim-colors-solarized'
 "Plugin 'Valloric/YouCompleteMe'
 Plugin 'junegunn/vim-easy-align'
 Plugin 'Raimondi/delimitMate'
+Plugin 'scrooloose/syntastic'
 
 Plugin 'LaTeX-Box-Team/LaTeX-Box'
 Plugin 'elzr/vim-json'
@@ -35,7 +36,10 @@ filetype plugin indent on     " required
 syntax enable
 set background=dark
 colorscheme peachpuff
+" colorscheme solarized
 silent! colorscheme base16-3024 " conditional colorscheme"
+set term=xterm-256color
+let g:solarized_termcolors=256
 
 filetype plugin indent on
 set smartindent
@@ -118,3 +122,13 @@ map <C-n> :NERDTreeToggle<CR>
 
 " Use ag for searching
 let g:ackprg = 'ag --nogroup --nocolor --column'
+
+" Syntastic syntax checking settings
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+"let g:syntastic_always_populate_loc_list = 1
+"let g:syntastic_auto_loc_list = 1
+"let g:syntastic_check_on_open = 1
+"let g:syntastic_check_on_wq = 0
