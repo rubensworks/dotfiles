@@ -4,5 +4,6 @@ alias gau="git add -u"
 
 cdl() { cd "$@" && ls; }
 gcm() { git commit -m "$@"; }
+gacm() { git add -u && git commit -m "$@"; }
 ldir() { if [ -f ~/.saved_dir ]; then dir=$(cat ~/.saved_dir) && cd $dir; fi; }
 

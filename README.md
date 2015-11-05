@@ -23,3 +23,5 @@ Add the following line to your ~/.vimrc:
 * cdl = cd;ls
 * gcm = git commit -m "$@"
 * gau = git add -u
+* gacm = git add -u && git comit -m "$@"
+
