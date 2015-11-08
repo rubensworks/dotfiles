@@ -12,8 +12,8 @@ if [ "$(uname -s)" = "Darwin" ]; then # Mac
     if [ -f $(brew --prefix)/etc/bash_completion ]; then
       . $(brew --prefix)/etc/bash_completion
     fi
-else # Non-Mac
-
+#else # Non-Mac
+    
 fi
 
 # Include pending changes for git repos
