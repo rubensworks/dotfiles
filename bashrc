@@ -6,12 +6,16 @@ DIR=$(dirname "${BASH_SOURCE[0]}" )
 source $DIR/aliases
 source $DIR/vendors/gradle-tab-completion/gradle-tab-completion.bash
 
+if [ "$(uname -s)" = "Darwin" ]; then # Mac
+    # Bash autocomplete, requires bash_completion to be installed via brew.
+    # TODO: maybe abstract this for non-mac machines as well?
+    if [ -f $(brew --prefix)/etc/bash_completion ]; then
+      . $(brew --prefix)/etc/bash_completion
+    fi
+else # Non-Mac
 
-# Bash autocomplete, requires bash_completion to be installed via brew.
-# TODO: maybe abstract this for non-mac machines as well?
-if [ -f $(brew --prefix)/etc/bash_completion ]; then
-  . $(brew --prefix)/etc/bash_completion
 fi
+
 # Include pending changes for git repos
 export GIT_PS1_SHOWDIRTYSTATE=1
 # Fancy colors and console metadata, including git repo status
