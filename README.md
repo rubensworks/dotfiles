@@ -1,7 +1,13 @@
 ## Dotfiles
 
-### Install:
-    
+### Install automatically:
+
+    sh -c "`curl -fsSl https://raw.githubusercontent.com/rubensworks/dotfiles/master/install.sh`"
+
+### Install manually:
+
+First clone this repo.
+
 Add the following line to your ~/.bash_profile:
 
     source [path_to_this_repo]/bashrc
