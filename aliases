@@ -1,6 +1,7 @@
 alias ll="ls -l"
 alias g="git status"
 alias gau="git add -u"
+alias gca="git commit --amend"
 
 cdl() { cd "$@" && ls; }
 gcm() { git commit -m "$@"; }

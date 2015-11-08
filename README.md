@@ -30,4 +30,5 @@ Add the following line to your ~/.vimrc:
 * gcm = git commit -m "$@"
 * gau = git add -u
 * gacm = git add -u && git comit -m "$@"
+* gca = git commit --amend
 
