@@ -4,6 +4,7 @@
 DIR=$(dirname "${BASH_SOURCE[0]}" )
 
 source $DIR/aliases
+source $DIR/vendors/gradle-tab-completion/gradle-tab-completion.bash
 
 
 # Bash autocomplete, requires bash_completion to be installed via brew.
