@@ -26,6 +26,8 @@ Plugin 'elzr/vim-json'
 Plugin 'niklasl/vim-rdf'
 Plugin 'moll/vim-node'
 
+Plugin 'edkolev/tmuxline.vim'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on     " required
@@ -132,3 +134,7 @@ set statusline+=%*
 "let g:syntastic_auto_loc_list = 1
 "let g:syntastic_check_on_open = 1
 "let g:syntastic_check_on_wq = 0
+
+" Disable powerline separator symbols
+let g:tmuxline_powerline_separators = 0
+
