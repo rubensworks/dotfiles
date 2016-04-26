@@ -3,11 +3,11 @@ alias g="git status"
 alias gau="git add -u"
 alias gca="git commit --amend"
 alias docker-rm="docker ps -a | grep Exited | awk '{ print $1 }' | xargs docker rm -v"
-alias docker-cleanall="docker stop $(docker ps -a -q) && docker rm $(docker ps -a -q)"
 
 cdl() { cd "$@" && ls; }
 gcm() { git commit -m "$@"; }
 gacm() { git add -u && git commit -m "$@"; }
 ldir() { if [ -f ~/.saved_dir ]; then dir=$(cat ~/.saved_dir) && cd $dir; fi; }
 watch() { while :; do clear; $1; sleep $2; done }
+docker-cleanall() { docker stop $(docker ps -a -q) && docker rm $(docker ps -a -q); }
 
