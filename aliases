@@ -3,6 +3,7 @@ alias g="git status"
 alias gau="git add -u"
 alias gca="git commit --amend"
 alias docker-rm="docker ps -a | grep Exited | awk '{ print $1 }' | xargs docker rm -v"
+alias docker-cleanall="docker stop $(docker ps -a -q) && docker rm $(docker ps -a -q)"
 
 cdl() { cd "$@" && ls; }
 gcm() { git commit -m "$@"; }

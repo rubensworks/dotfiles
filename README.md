@@ -33,4 +33,5 @@ Add the following line to your ~/.vimrc:
 * gacm = git add -u && git comit -m "$@"
 * gca = git commit --amend
 * docker-rm = docker ps -a | grep Exited | awk '{ print $1 }' | xargs docker rm -v
+* docker-cleanall = docker stop $(docker ps -a -q) && docker rm $(docker ps -a -q)
 
