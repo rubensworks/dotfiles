@@ -1,0 +1,8 @@
+#!/bin/bash
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+properties="$DIR/../.properties"
+. $properties
+
+url=$1
+curl "http://api.bit.ly/v3/shorten?login=$bitly_login&apikey=$bitly_apikey&longurl=$url&format=txt"
+
