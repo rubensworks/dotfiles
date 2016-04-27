@@ -35,4 +35,5 @@ Add the following line to your ~/.vimrc:
 * gca = git commit --amend
 * docker-rm = docker ps -a | grep Exited | awk '{ print $1 }' | xargs docker rm -v
 * docker-cleanall = docker stop $(docker ps -a -q) && docker rm $(docker ps -a -q)
+* is-mac = If running on a mac
 

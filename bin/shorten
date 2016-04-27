@@ -4,5 +4,14 @@ properties="$DIR/../.properties"
 . $properties
 
 url=$1
-curl "http://api.bit.ly/v3/shorten?login=$bitly_login&apikey=$bitly_apikey&longurl=$url&format=txt"
+short=$(curl --silent "http://api.bit.ly/v3/shorten?login=$bitly_login&apikey=$bitly_apikey&longurl=$url&format=txt")
+echo $short
+
+__IS_MAC=${__IS_MAC:-$(test $(uname -s) == "Darwin" && echo 'true')}
+if [ -n "${__IS_MAC}" ]; then
+  echo $short | /usr/bin/pbcopy
+else
+  # copy to selection buffer AND clipboard
+  echo $short | xclip -i -sel c -f | xclip -i -sel p
+fi
 
