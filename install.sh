@@ -5,8 +5,8 @@ if [ ! -d "$HOME/.rwdotfiles" ]; then
     git clone --depth=1 --recursive https://github.com/rubensworks/dotfiles.git "$HOME/.rwdotfiles"
     cd "$HOME/.rwdotfiles"
     dir="$HOME/.rwdotfiles"
-    echo -e "\nsource $dir/bashrc\n" >> ~/.bashrc
-    echo -e "\nsource $dir/vimrc\n" >> ~/.vimrc
+    echo "source $dir/bashrc" >> ~/.bashrc
+    echo "source $dir/vimrc" >> ~/.vimrc
 
     # Make required vim directories
     mkdir -p ~/.vim/tmp/backup/
