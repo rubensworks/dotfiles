@@ -23,6 +23,7 @@ Add the following line to your ~/.vimrc:
 * ldir: Load the saved working directory and set it as current directory.
 * watch: Executes $1 every $2 seconds
 * shorten: Shortens url $1, requires .properties to be created in the repo folder with bitly api details.
+* curltime: Measures how long a curl request takes
 
 ### List of aliases:
 

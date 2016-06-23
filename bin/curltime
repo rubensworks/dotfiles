@@ -1,0 +1,4 @@
+#!/bin/bash
+# Inspired by: https://josephscott.org/archives/2011/10/timing-details-with-curl/
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+curl -w "@$DIR/time.curl" -o /dev/null -s $@
