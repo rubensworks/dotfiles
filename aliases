@@ -11,4 +11,5 @@ ldir() { if [ -f ~/.saved_dir ]; then dir=$(cat ~/.saved_dir) && cd $dir; fi; }
 watch() { while :; do clear; $1; sleep $2; done }
 docker-cleanall() { docker stop $(docker ps -a -q) && docker rm $(docker ps -a -q); }
 is-mac() { test $(uname -s) == "Darwin" && echo "true"; }
+docker-init() { eval $(docker-machine env default); }
 
