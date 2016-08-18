@@ -38,4 +38,5 @@ Add the following line to your ~/.vimrc:
 * docker-cleanall = docker stop $(docker ps -a -q) && docker rm $(docker ps -a -q)
 * is-mac = If running on a mac
 * docker-init = Set your docker environment variables, Kinematic must be started.
+* transfer-pub-key = Transfer your public key to $1, so $1 should be in the form of "username@hostname"
 
