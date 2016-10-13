@@ -30,6 +30,9 @@ if [ ! -d "$HOME/.rwdotfiles" ]; then
         sudo apt-get install ctags # Required for the vim Taglist plugin
     fi
 
+    # Add global gitignore
+    git config --global core.excludesfile $dir/.gitignore_global
+
 else
     echo "rubensworks' dotfiles are already installed at $HOME/.rwdotfiles"
 fi
