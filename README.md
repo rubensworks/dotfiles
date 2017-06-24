@@ -41,4 +41,5 @@ Add the following line to your ~/.vimrc:
 * docker-init = Set your docker environment variables, Kinematic must be started.
 * transfer-pub-key = Transfer your public key to $1, so $1 should be in the form of "username@hostname"
 * json = python -m json.tool
+* find-largest = Find the 15 largest files in the given folder
 
