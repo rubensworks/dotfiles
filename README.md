@@ -31,6 +31,7 @@ Add the following line to your ~/.vimrc:
 * g = git status
 * cdl = cd;ls
 * gcm = git commit -m "$@"
+* gcnm = git commit -m "$@"
 * gau = git add -u
 * gacm = git add -u && git comit -m "$@"
 * gca = git commit --amend

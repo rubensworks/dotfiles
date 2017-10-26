@@ -7,6 +7,7 @@ alias json="python -m json.tool"
 
 cdl() { cd "$@" && ls; }
 gcm() { git commit -m "$@"; }
+gcnm() { git commit -n -m "$@"; }
 gacm() { git add -u && git commit -m "$@"; }
 ldir() { if [ -f ~/.saved_dir ]; then dir=$(cat ~/.saved_dir) && cd $dir; fi; }
 watch() { while :; do clear; $1; sleep $2; done }
