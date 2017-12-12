@@ -1,0 +1,19 @@
+#!/bin/bash
+# dvisvgm requires ghostlib
+if [ -z "$LIBGS"]; then
+    LIBGS="/usr/local/Cellar/ghostscript/9.21_1/lib/libgs.dylib"
+fi
+
+in=$(echo $1 | sed "s/\.tex$//")
+
+# compile tex -> dvi -> svg
+basename=$(echo "$in" | sed "s/^\(.*\/\)*\([^\/]*\)\.tex$/\2/")
+targetdir=$(echo "$in" | sed "s/^\(.*\/\)*\([^\/]*\)\.tex$/\1/")
+latex    -interaction=nonstopmode -halt-on-error $in
+dvisvgm --libgs=$LIBGS --no-fonts $basename.dvi $basename.svg
+if [ "$in" != "$targetdir" ]; then
+    mv $basename.svg $targetdir
+fi
+
+# cleanup
+rm $basename.aux $basename.dvi $basename.log
