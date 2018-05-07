@@ -36,6 +36,9 @@ Add the following line to your ~/.vimrc:
 * gau = git add -u
 * gacm = git add -u && git comit -m "$@"
 * gca = git commit --amend
+* gr = git remote -v
+* gplom = git pull origin master
+* gpsom = git push origin master
 * docker-rm = docker ps -a | grep Exited | awk '{ print $1 }' | xargs docker rm -v
 * docker-cleanall = docker stop $(docker ps -a -q) && docker rm $(docker ps -a -q)
 * docker-cleanimgs = Removes all untagged docker images

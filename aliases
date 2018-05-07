@@ -9,6 +9,9 @@ cdl() { cd "$@" && ls; }
 gcm() { git commit -m "$@"; }
 gcnm() { git commit -n -m "$@"; }
 gacm() { git add -u && git commit -m "$@"; }
+gr() { git remote -v; }
+gpsom() { git push origin master; }
+gplom() { git pull origin master; }
 ldir() { if [ -f ~/.saved_dir ]; then dir=$(cat ~/.saved_dir) && cd $dir; fi; }
 watch() { while :; do clear; $1; sleep $2; done }
 docker-cleanall() { docker stop $(docker ps -a -q) && docker rm $(docker ps -a -q); }
