@@ -4,6 +4,9 @@ alias gau="git add -u"
 alias gca="git commit --amend"
 alias docker-rm="docker ps -a | grep Exited | awk '{ print $1 }' | xargs docker rm -v"
 alias json="python -m json.tool"
+alias chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome"
+alias chrome-canary="/Applications/Google\ Chrome\ Canary.app/Contents/MacOS/Google\ Chrome\ Canary"
+alias chromium="/Applications/Chromium.app/Contents/MacOS/Chromium"
 
 cdl() { cd "$@" && ls; }
 gcm() { git commit -m "$@"; }
