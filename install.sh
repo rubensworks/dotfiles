@@ -33,6 +33,10 @@ if [ ! -d "$HOME/.rwdotfiles" ]; then
     # Add global gitignore
     git config --global core.excludesfile $dir/.gitignore_global
 
+    # Set template directory
+    # Everything in this dir will be copied to .git if a repo is initialized.
+    git config --global init.templatedir $dir/git-template
+
 else
     echo "rubensworks' dotfiles are already installed at $HOME/.rwdotfiles"
 fi

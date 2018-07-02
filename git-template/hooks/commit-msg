@@ -1,0 +1,36 @@
+#!/bin/bash
+#
+# .git/hooks/commit-msg
+#
+# Check for maximum line lengths
+#
+# A git hook script to check the commit log message.
+# Called by "git commit" with one argument, the name of the file
+# that has the commit message.  The hook should exit with non-zero
+# status after issuing an appropriate message if it wants to stop the
+# commit.
+#
+# Source: https://gist.github.com/ordnungswidrig/b7f5413bec0b098f5838
+
+YELLOW='\033[0;33m'
+RED='\033[0;31m'
+
+cat "$1" | head -1 | grep -e '^..\{50\}' >/dev/null && {
+        message=$(cat $1)
+        firstLine=$(printf "$message" | sed -n 1p)
+        firstLineLength=$(printf ${#firstLine})
+        echo -e >&2 "${YELLOW}Warning: First commit message line exceeds 50 char limit. (Got $firstLineLength)"
+}
+cat "$1" | sed -n 2p | grep -e '^\S*$' 2>/dev/null || [ $(cat "$1" | wc -l) -le 2 ] || {
+        echo -e >&2 "${RED}Error: Second commit message line must be empty."
+        cat "$1" | sed 's/^/  /'
+        exit 1
+}
+cat "$1" | grep -e '^..\{72\}' >/dev/null && {
+        echo -e >&2 "${RED}Error: A commit message line exceeds 72 char limit."
+        echo -e >&2 "${RED}  $(printf '_%.0s' {1..72})"
+        cat "$1" | sed 's/^/  /'
+        echo -e >&2 "${RED}  $(printf '_%.0s' {1..72})"
+        exit 1
+}
+exit 0
