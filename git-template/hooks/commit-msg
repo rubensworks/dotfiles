@@ -26,7 +26,7 @@ cat "$1" | sed -n 2p | grep -e '^\S*$' 2>/dev/null || [ $(cat "$1" | wc -l) -le 
         cat "$1" | sed 's/^/  /'
         exit 1
 }
-cat "$1" | grep -e '^..\{72\}' >/dev/null && {
+cat "$1" | grep -v '^#' | grep -e '^..\{72\}' >/dev/null && {
         echo -e >&2 "${RED}Error: A commit message line exceeds 72 char limit."
         echo -e >&2 "${RED}  $(printf '_%.0s' {1..72})"
         cat "$1" | sed 's/^/  /'
