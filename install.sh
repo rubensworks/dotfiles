@@ -8,6 +8,11 @@ if [ ! -d "$HOME/.rwdotfiles" ]; then
     echo "source $dir/bashrc" >> ~/.bashrc
     echo "source $dir/vimrc" >> ~/.vimrc
 
+    # Init .bash_profile
+    if [ ! -d "$HOME/.bash_profile" ]; then
+        echo "source $dir/bash_profile" >> ~/.bash_profile
+    fi
+
     # Make required vim directories
     mkdir -p ~/.vim/tmp/backup/
     mkdir -p ~/.vim/tmp/swap/
