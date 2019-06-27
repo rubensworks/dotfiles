@@ -1,0 +1,4 @@
+#!/bin/bash
+cmd="$@"
+python -m timeit -n 1 -r 5 "__import__('os').system('$cmd')"
+

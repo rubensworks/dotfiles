@@ -25,6 +25,7 @@ Add the following line to your ~/.vimrc:
 * shorten: Shortens url $1, requires .properties to be created in the repo folder with bitly api details.
 * curltime: Measures how long a curl request takes
 * tex2svg: Converts a TeX file to SVG
+* timeperf: Like `time`, but takes the best of five runs
 
 ### List of aliases:
 
