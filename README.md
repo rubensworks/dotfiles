@@ -26,6 +26,7 @@ Add the following line to your ~/.vimrc:
 * curltime: Measures how long a curl request takes
 * tex2svg: Converts a TeX file to SVG
 * timeperf: Like `time`, but takes the best of five runs
+* npm-release: A convenience script for publishing and pushing a new npm package release
 
 ### List of aliases:
 
