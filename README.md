@@ -38,6 +38,7 @@ Add the following line to your ~/.vimrc:
 * gau = git add -u
 * gacm = git add -u && git comit -m "$@"
 * gca = git commit --amend
+* gcna = git commit -n --amend
 * gr = git remote -v
 * gplom = git pull origin master
 * gpsom = git push origin master
