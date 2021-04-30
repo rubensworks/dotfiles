@@ -40,6 +40,7 @@ Add the following line to your ~/.vimrc:
 * gca = git commit --amend
 * gcna = git commit -n --amend
 * gr = git remote -v
+* gd = git diff
 * gplom = git pull origin master
 * gpsom = git push origin master
 * docker-rm = docker ps -a | grep Exited | awk '{ print $1 }' | xargs docker rm -v

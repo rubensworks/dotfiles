@@ -14,6 +14,7 @@ gcm() { git commit -m "$@"; }
 gcnm() { git commit -n -m "$@"; }
 gacm() { git add -u && git commit -m "$@"; }
 gr() { git remote -v; }
+gd() { git diff; }
 gpsom() { git push origin master; }
 gplom() { git pull origin master; }
 ldir() { if [ -f ~/.saved_dir ]; then dir=$(cat ~/.saved_dir) && cd $dir; fi; }
