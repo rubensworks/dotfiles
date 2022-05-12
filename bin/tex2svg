@@ -1,8 +1,9 @@
 #!/bin/bash
 # dvisvgm requires ghostlib
 if [ -z "$LIBGS"]; then
-    LIBGS="/usr/local/Cellar/ghostscript/9.52/lib/libgs.dylib"
+    LIBGS="/usr/local/Cellar/ghostscript/9.55.0/lib/libgs.dylib"
 fi
+echo $LIBGS
 
 in=$(echo $1 | sed "s/\.tex$//")
 

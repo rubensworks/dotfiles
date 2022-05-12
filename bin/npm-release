@@ -3,4 +3,4 @@ if [[ $# -eq 0 ]] ; then
     echo 'Missing bump type arg (patch, minor, major)'
     exit 1
 fi
-npm version $1 && npm publish && git push --tags && git push origin master
+open CHANGELOG.md && npm version $1 && npm publish && git push --tags && git push origin master
