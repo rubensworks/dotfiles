@@ -8,6 +8,17 @@
 # Matches are substitution rules: when you type the "trigger" string
 # it gets replaced by the "replace" string.
 matches:
+  - trigger: ":web"
+    replace: "https://www.rubensworks.net/"
+  - trigger: ":wid"
+    replace: "https://www.rubensworks.net/#me"
+  - trigger: ":em"
+    replace: "rubensworks@gmail.com"
+  - trigger: ":pem"
+    replace: "rtaelman@gmail.com"
+  - trigger: ":wem"
+    replace: "ruben.taelman@ugent.be"
+
   # Simple text replacement
   - trigger: ":espanso"
     replace: "Hi there!"
