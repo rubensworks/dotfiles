@@ -42,6 +42,9 @@ if [ ! -d "$HOME/.rwdotfiles" ]; then
     # Everything in this dir will be copied to .git if a repo is initialized.
     git config --global init.templatedir $dir/git-template
 
+    # Install espano configs
+    ln -s $HOME/.rwdotfiles/espano/config/ ~/Library/Application\ Support/espanso/config
+    ln -s $HOME/.rwdotfiles/espano/match/ ~/Library/Application\ Support/espanso/match
 else
     echo "rubensworks' dotfiles are already installed at $HOME/.rwdotfiles"
 fi

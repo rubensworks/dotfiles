@@ -53,3 +53,6 @@ Add the following line to your ~/.vimrc:
 * find-largest = Find the 15 largest files in the given folder
 * git-rm-pushed-tag = Delete a pushed git tag
 
+### Other tools
+
+* [espano](https://espanso.org/): Installation instructions: https://espanso.org/docs/install/mac/
